@@ -66,7 +66,7 @@ const chartData = Array.from(new Set(attacks.map((item) => item.month)))
     );
   });
 
-const chartWidth = Math.max(chartData.length * 72, 900);
+const chartWidth = Math.max(chartData.length * 30, 900);
 const chartHeight = 360;
 const chartMargin = { top: 24, right: 34, bottom: 86, left: 54 };
 const plotWidth = chartWidth - chartMargin.left - chartMargin.right;

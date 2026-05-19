@@ -4,13 +4,13 @@ import { useState } from "react";
 
 import { last10DailyAttacks } from "../data/dailyAttacks";
 
-const chartWidth = 980;
-const chartHeight = 380;
+const chartWidth = 800;
+const chartHeight = 400;
 const chartMargin = { top: 30, right: 60, bottom: 70, left: 62 };
 const plotWidth = chartWidth - chartMargin.left - chartMargin.right;
 const plotHeight = chartHeight - chartMargin.top - chartMargin.bottom;
 const maxLaunched = Math.max(
-  ...last10DailyAttacks.map((item) => Math.max(item.uavs, item.missiles)),
+  ...last10DailyAttacks.map((item) => item.uavs + item.missiles),
   1
 );
 const countAxisMax = Math.ceil(maxLaunched / 100) * 100;
@@ -19,7 +19,7 @@ const countTicks = Array.from({ length: 6 }, (_, index) =>
 );
 const rateTicks = [0, 20, 40, 60, 80, 100];
 const dayStep = plotWidth / last10DailyAttacks.length;
-const barWidth = Math.min(26, dayStep * 0.28);
+const barWidth = Math.min(34, dayStep * 0.45);
 
 function getX(index: number) {
   return chartMargin.left + dayStep * index + dayStep / 2;
@@ -61,9 +61,9 @@ export default function Last10DaysDashboard() {
     <div className="rounded-2xl border border-zinc-800 bg-zinc-950 p-6">
       <div className="mb-5 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
-          <h3 className="text-xl font-semibold text-white">Attacks in the last 10 days</h3>
-          <p className="mt-1 text-sm text-zinc-400">
-            Daily launched UAVs, all missiles, and total interception rate.
+          
+          <p className="mt-1 text-l text-zinc-400">
+            Daily launched UAVs, missiles, and total interception rate.
           </p>
         </div>
 
@@ -134,30 +134,39 @@ export default function Last10DaysDashboard() {
               );
             })}
 
-            {last10DailyAttacks.map((item, index) => {
-              const x = getX(index);
-              const uavHeight = chartMargin.top + plotHeight - getCountY(item.uavs);
-              const missileHeight =
-                chartMargin.top + plotHeight - getCountY(item.missiles);
+{last10DailyAttacks.map((item, index) => {
+  const x = getX(index);
+  const total = item.uavs + item.missiles;
 
-              return (
-                <g key={item.date}>
-                  <rect
-                    x={x - barWidth - 3}
-                    y={getCountY(item.uavs)}
-                    width={barWidth}
-                    height={uavHeight}
-                    fill="#1d4ed8"
-                    rx={3}
-                  />
-                  <rect
-                    x={x + 3}
-                    y={getCountY(item.missiles)}
-                    width={barWidth}
-                    height={missileHeight}
-                    fill="#ef4444"
-                    rx={3}
-                  />
+  const baselineY = chartMargin.top + plotHeight;
+  const uavY = getCountY(item.uavs);
+  const totalY = getCountY(total);
+
+  const uavHeight = baselineY - uavY;
+  const missileHeight = uavY - totalY;
+
+  return (
+    <g key={item.date}>
+{/* UAVs: bottom part of stacked bar */}
+<rect
+  x={x - barWidth / 2}
+  y={uavY}
+  width={barWidth}
+  height={uavHeight}
+  fill="#001c6a"
+  
+/>
+
+{/* Missiles: upper part of stacked bar */}
+<rect
+  x={x - barWidth / 2}
+  y={totalY}
+  width={barWidth}
+  height={missileHeight}
+  fill="#c70303"
+ 
+/>
+                  
                   <text
                     x={x}
                     y={chartMargin.top + plotHeight + 28}
@@ -210,7 +219,7 @@ export default function Last10DaysDashboard() {
             <polyline
               points={getRateLinePoints()}
               fill="none"
-              stroke="#22c55e"
+              stroke="#01a13c"
               strokeWidth={3}
               strokeLinecap="round"
               strokeLinejoin="round"
