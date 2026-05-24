@@ -776,7 +776,7 @@ export const attacks = [
   {
     "month": "May 2026",
     "weaponType": "Ballistic missile",
-    "launched": 87,
+    "launched": 88,
     "intercepted": 24
   }
 ];

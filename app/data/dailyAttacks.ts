@@ -84,9 +84,9 @@ export const last10DailyAttacks = [
     "date": "2026-05-24",
     "label": "May 24",
     "uavs": 600,
-    "missiles": 89,
-    "launched": 689,
+    "missiles": 90,
+    "launched": 690,
     "intercepted": 604,
-    "interceptionRate": 87.7
+    "interceptionRate": 87.5
   }
 ];
