@@ -1,68 +1,5 @@
 export const last10DailyAttacks = [
   {
-    "date": "2026-05-08",
-    "label": "May 8",
-    "uavs": 67,
-    "missiles": 0,
-    "launched": 67,
-    "intercepted": 56,
-    "interceptionRate": 83.6
-  },
-  {
-    "date": "2026-05-09",
-    "label": "May 9",
-    "uavs": 43,
-    "missiles": 1,
-    "launched": 44,
-    "intercepted": 34,
-    "interceptionRate": 77.3
-  },
-  {
-    "date": "2026-05-10",
-    "label": "May 10",
-    "uavs": 27,
-    "missiles": 0,
-    "launched": 27,
-    "intercepted": 27,
-    "interceptionRate": 100
-  },
-  {
-    "date": "2026-05-11",
-    "label": "May 11",
-    "uavs": 0,
-    "missiles": 0,
-    "launched": 0,
-    "intercepted": 0,
-    "interceptionRate": null
-  },
-  {
-    "date": "2026-05-12",
-    "label": "May 12",
-    "uavs": 216,
-    "missiles": 0,
-    "launched": 216,
-    "intercepted": 192,
-    "interceptionRate": 88.9
-  },
-  {
-    "date": "2026-05-13",
-    "label": "May 13",
-    "uavs": 892,
-    "missiles": 0,
-    "launched": 892,
-    "intercepted": 821,
-    "interceptionRate": 92
-  },
-  {
-    "date": "2026-05-14",
-    "label": "May 14",
-    "uavs": 675,
-    "missiles": 56,
-    "launched": 731,
-    "intercepted": 693,
-    "interceptionRate": 94.8
-  },
-  {
     "date": "2026-05-15",
     "label": "May 15",
     "uavs": 141,
@@ -88,5 +25,68 @@ export const last10DailyAttacks = [
     "launched": 287,
     "intercepted": 279,
     "interceptionRate": 97.2
+  },
+  {
+    "date": "2026-05-18",
+    "label": "May 18",
+    "uavs": 524,
+    "missiles": 22,
+    "launched": 546,
+    "intercepted": 507,
+    "interceptionRate": 92.9
+  },
+  {
+    "date": "2026-05-19",
+    "label": "May 19",
+    "uavs": 209,
+    "missiles": 0,
+    "launched": 209,
+    "intercepted": 180,
+    "interceptionRate": 86.1
+  },
+  {
+    "date": "2026-05-20",
+    "label": "May 20",
+    "uavs": 238,
+    "missiles": 1,
+    "launched": 239,
+    "intercepted": 206,
+    "interceptionRate": 86.2
+  },
+  {
+    "date": "2026-05-21",
+    "label": "May 21",
+    "uavs": 116,
+    "missiles": 1,
+    "launched": 117,
+    "intercepted": 109,
+    "interceptionRate": 93.2
+  },
+  {
+    "date": "2026-05-22",
+    "label": "May 22",
+    "uavs": 124,
+    "missiles": 0,
+    "launched": 124,
+    "intercepted": 115,
+    "interceptionRate": 92.7
+  },
+  {
+    "date": "2026-05-23",
+    "label": "May 23",
+    "uavs": 124,
+    "missiles": 0,
+    "launched": 124,
+    "intercepted": 102,
+    "interceptionRate": 82.3
+  },
+  {
+    "date": "2026-05-24",
+    "label": "May 24",
+    "uavs": 600,
+    "missiles": 89,
+    "launched": 689,
+    "intercepted": 604,
+    "interceptionRate": 87.7
   }
 ];

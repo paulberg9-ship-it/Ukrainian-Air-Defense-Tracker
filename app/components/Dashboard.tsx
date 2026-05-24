@@ -60,7 +60,7 @@ export default function Dashboard() {
     totalLaunched > 0 ? (totalIntercepted / totalLaunched) * 100 : 0;
   return (
     
-    <section className="mx-auto max-w-6xl px-4 py-4">
+    <section className="mx-auto w-full max-w-[calc(100vw-4rem)] px-4 py-4">
        <p className=" mb-4 mt-4 max-w-7xl text-5xl font-bold text-zinc-300 px-4 py-4">
           Last 10 Days Attacks 
       </p>

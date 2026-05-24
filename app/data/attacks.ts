@@ -764,19 +764,19 @@ export const attacks = [
   {
     "month": "May 2026",
     "weaponType": "UAV",
-    "launched": 4770,
-    "intercepted": 4359
+    "launched": 6705,
+    "intercepted": 6123
   },
   {
     "month": "May 2026",
     "weaponType": "Cruise missile",
-    "launched": 47,
-    "intercepted": 35
+    "launched": 112,
+    "intercepted": 83
   },
   {
     "month": "May 2026",
     "weaponType": "Ballistic missile",
-    "launched": 39,
-    "intercepted": 13
+    "launched": 87,
+    "intercepted": 24
   }
 ];
